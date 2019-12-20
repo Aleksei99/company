@@ -11,17 +11,15 @@ public class BinaryWords {
         FileWriter writer = new FileWriter("C:\\Users\\User\\Desktop\\output.txt");
         int symbol = bufferedReader.read();
         int k = 0;
-        char s;
         while (symbol != -1) {
             char c = (char) symbol;
             if (c == '0') {
                 k++;
-                System.out.println("hjhj");
-            } else {
-                char w = (char) ('a'+k);
-                String ans =Character.toString(w);
+            } else if (c == '1') {
+                char w = (char) ('a' + k);
+                String ans = Character.toString(w);
                 writer.write(ans);
-                System.out.println("akjfb");
+                writer.flush();// выгрузка ресурсов.Без try c ресурсами надо это писать
                 k = 0;
             }
             symbol = bufferedReader.read();

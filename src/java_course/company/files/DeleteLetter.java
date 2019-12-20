@@ -10,6 +10,7 @@ public class DeleteLetter {
         StringTokenizer stringTokenizer = new StringTokenizer(line);
         String tokenNumber = stringTokenizer.nextToken();
         int position = Integer.parseInt(tokenNumber);
+        position--;
         String wrongWord = stringTokenizer.nextToken();
         StringBuffer stringBuffer = new StringBuffer(wrongWord);
 
@@ -22,8 +23,7 @@ public class DeleteLetter {
                 writer.write(wrongWord);
             }
         }
-        char ch ='a'+1;
-        System.out.println(ch);
+
 
         System.out.println(stringBuffer);
     }
